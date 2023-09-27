@@ -1,0 +1,13 @@
+@PACKAGE_INIT@
+
+set_and_check(ARMONIK_API_EXPERIMENTAL_PREFIX "@PACKAGE_CMAKE_INSTALL_PREFIX@")
+set_and_check(ARMONIK_API_EXPERIMENTAL_LIBPATH "@PACKAGE_CMAKE_INSTALL_LIBDIR@")
+
+include(CMakeFindDependencyMacro)
+find_dependency(ArmoniK.Api.Client CONFIG REQUIRED)
+
+include("${ARMONIK_API_EXPERIMENTAL_LIBPATH}/cmake/ArmoniK.Api.Experimental/ArmoniK.Api.ExperimentalTargets.cmake")
+
+check_required_components(ArmoniK.Api.Experimental)
+
+include_directories("${ARMONIK_API_EXPERIMENTAL_PREFIX}/include/armonik/worker")
