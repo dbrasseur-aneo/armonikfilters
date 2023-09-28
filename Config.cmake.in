@@ -10,4 +10,4 @@ include("${ARMONIK_API_EXPERIMENTAL_LIBPATH}/cmake/ArmoniK.Api.Experimental/Armo
 
 check_required_components(ArmoniK.Api.Experimental)
 
-include_directories("${ARMONIK_API_EXPERIMENTAL_PREFIX}/include/armonik/worker")
+include_directories("${ARMONIK_API_EXPERIMENTAL_PREFIX}/include/armonik/experimental")
